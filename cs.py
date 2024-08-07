@@ -143,7 +143,7 @@ if input_category:
     result = top_recommended_by_rating(df, input_category)
     if isinstance(result, dict):
         st.write("Top Recommendation based on Ratings:")
-        st.write(f"{result['recommended_product']} by {result['recommended_brand']} (Average Rating: {result['average_rating']:.2f})")
+        st.write(f"{result['recommended_product']}  (Average Rating: {result['average_rating']:.2f})")
     elif isinstance(result, str) and not message_displayed:  # Check if the result is an error message and hasn't been displayed yet
         st.write(result)
         message_displayed = True
